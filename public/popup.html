@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tab Session Saver</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon-48.png" alt="" width="28" height="28">
+    <h1>Tab Session Saver</h1>
+  </header>
+  <div class="save-row">
+    <input id="name" type="text" placeholder="Session name (optional)" maxlength="80" aria-label="Session name">
+    <button id="save" type="button" class="primary">Save window</button>
+  </div>
+  <p id="status" role="status"></p>
+  <div id="list"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

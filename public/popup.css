@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --card: #f4f6fb;
+  --text: #1b1f24;
+  --muted: #6b7280;
+  --border: #e1e5ee;
+  --accent: #2f6feb;
+  --accent-text: #ffffff;
+  --danger: #c62828;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c;
+    --card: #1e232b;
+    --text: #e8eaee;
+    --muted: #9aa3b2;
+    --border: #2d3441;
+    --accent: #5b8def;
+    --accent-text: #0b1020;
+    --danger: #ff6b6b;
+  }
+}
+* { box-sizing: border-box; }
+body { width: 360px; margin: 0; padding: 14px; background: var(--bg); color: var(--text); font: 13px/1.4 system-ui, "Segoe UI", sans-serif; }
+header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+h1 { font-size: 15px; margin: 0; }
+.save-row { display: flex; gap: 6px; }
+input { flex: 1; min-width: 0; padding: 7px 9px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text); }
+input:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+button { padding: 7px 11px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); color: var(--text); cursor: pointer; font: inherit; }
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); font-weight: 600; }
+button.danger { color: var(--danger); }
+#status { min-height: 1.3em; margin: 8px 0; color: var(--muted); }
+#list { max-height: 320px; overflow-y: auto; }
+.item { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 9px 10px; margin-bottom: 6px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+.info { display: flex; flex-direction: column; min-width: 0; }
+.info strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.info span { color: var(--muted); font-size: 12px; }
+.actions { display: flex; gap: 4px; flex-shrink: 0; }
+.empty { color: var(--muted); text-align: center; padding: 14px 0; }
